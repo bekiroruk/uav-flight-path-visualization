@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-  <img src="assets/demo.gif" alt="UAV flight path animation demo" width="820">
+  <img src="assets/hero.svg" alt="UAV Flight Path Visualization project overview" width="1000">
 </p>
 
 ## Overview
@@ -24,21 +24,11 @@ The application loads a GPX flight track, calculates UAV heading and cumulative 
 
 > Thesis title: **“UAV Ucus Yolunu 2-B ve 3-B Haritalarda Gorsellestirme”**
 
-## Demo
+## Working Demonstration
 
-### Synchronized 2D / 3D Flight Tracking
+The submitted working recordings were reviewed while reconstructing this repository. They show the MATLAB implementation rendering the route in 2D, opening a synchronized 3D terrain view, updating the current UAV position and navigation data, and moving the 3D camera along the simulated flight.
 
-<p align="center">
-  <img src="assets/screenshots/flight-route-2d-3d.jpg" alt="Synchronized 2D and 3D UAV route visualization" width="900">
-</p>
-
-The left panel tracks the UAV on a 2D topographic map, while the right panel follows the same route in a 3D terrain view. The visualization exposes the current location together with distance, altitude and heading information.
-
-### Flight Progress
-
-<p align="center">
-  <img src="assets/screenshots/flight-progress.jpg" alt="UAV flight progress" width="900">
-</p>
+See [`docs/demo.md`](docs/demo.md) for a concise description of the recorded behavior.
 
 ## Features
 
@@ -76,14 +66,12 @@ For a more detailed breakdown, see [`docs/architecture.md`](docs/architecture.md
 ```text
 uav-flight-path-visualization/
 ├── assets/
-│   ├── demo.gif
-│   └── screenshots/
-│       ├── flight-progress.jpg
-│       └── flight-route-2d-3d.jpg
+│   └── hero.svg
 ├── data/
 │   └── README.md
 ├── docs/
 │   ├── architecture.md
+│   ├── demo.md
 │   ├── references.md
 │   └── thesis-summary.md
 ├── src/
@@ -113,7 +101,7 @@ The original project expects `sample_uavtrack.gpx`. The GPX file was not present
 run("src/uav_flight_path_visualization.m")
 ```
 
-The script will create the initial geographic view, calculate route metrics, render synchronized 2D/3D views, and animate the UAV flight.
+The script creates the initial geographic view, calculates route metrics, renders synchronized 2D/3D views, and animates the UAV flight.
 
 ## Technical Notes
 
