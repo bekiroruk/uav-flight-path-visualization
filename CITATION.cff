@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the undergraduate thesis project."
+title: "UAV Flight Path Visualization in 2D and 3D Maps"
+type: software
+authors:
+  - family-names: "Oruk"
+    given-names: "Bekir"
+year: 2024
+repository-code: "https://github.com/bekiroruk/uav-flight-path-visualization"
+abstract: "MATLAB-based UAV flight path simulation and synchronized 2D/3D geospatial visualization with animated route tracking."
