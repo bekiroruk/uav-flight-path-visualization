@@ -22,7 +22,7 @@ This repository contains the implementation of my **2024 Computer Engineering un
 
 The application loads a GPX flight track, calculates UAV heading and cumulative three-dimensional travel distance, displays live navigation information, animates the UAV route from **Taksim Square** to **Camlica Tower**, and performs a 360° camera rotation at the destination.
 
-> Thesis title: **“UAV Ucus Yolunu 2-B ve 3-B Haritalarda Gorsellestirme”**
+> Thesis title: **“UAV Uçuş Yolunu 2-B ve 3-B Haritalarda Görselleştirme”**
 
 ## Working Demonstration
 
@@ -93,7 +93,7 @@ The original project expects `sample_uavtrack.gpx`. The GPX file was not present
 ## Running the Project
 
 1. Clone this repository.
-2. Place the original `sample_uavtrack.gpx` file in the MATLAB working directory (or update the path in the script).
+2. Place the original `sample_uavtrack.gpx` file in the repository's `data/` directory.
 3. Open MATLAB and make sure **Mapping Toolbox** is installed.
 4. Run:
 
