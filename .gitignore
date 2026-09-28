@@ -1,0 +1,20 @@
+# MATLAB temporary and backup files
+*.asv
+*.autosave
+*.m~
+
+# MATLAB generated folders/files
+slprj/
+codegen/
+*.slxc
+*.mex*
+*.mlappinstall
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local data that may be large or machine-specific
+*.mat
