@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx
+   version="1.1"
+   creator="The MathWorks, Inc. https://www.mathworks.com"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns="http://www.topografix.com/GPX/1/1"
+   xsi:schemaLocation="http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<name>sample_uavtrack.gpx</name>
+   <copyright author="The Mathworks, Inc.">
+      <year>2024</year>
+   </copyright>
+</metadata>
+<trk><name>Taksim Meydanı'ndan Çamlıca Kulesi'nin Zirvesine Uçuş Rotası</name>
+<trkseg>
+    <trkpt lat="41.0369" lon="28.9853"><ele>50.0</ele></trkpt>
+    <trkpt lat="41.0363" lon="28.9900"><ele>60.0</ele></trkpt>
+    <trkpt lat="41.0357" lon="28.9950"><ele>70.0</ele></trkpt>
+    <trkpt lat="41.0351" lon="29.0000"><ele>80.0</ele></trkpt>
+    <trkpt lat="41.0345" lon="29.0050"><ele>90.0</ele></trkpt>
+    <trkpt lat="41.0339" lon="29.0100"><ele>100.0</ele></trkpt>
+    <trkpt lat="41.0333" lon="29.0150"><ele>110.0</ele></trkpt>
+    <trkpt lat="41.0327" lon="29.0200"><ele>120.0</ele></trkpt>
+    <trkpt lat="41.0321" lon="29.0250"><ele>130.0</ele></trkpt>
+    <trkpt lat="41.0315" lon="29.0300"><ele>140.0</ele></trkpt>
+    <trkpt lat="41.0309" lon="29.0350"><ele>150.0</ele></trkpt>
+    <trkpt lat="41.0303" lon="29.0400"><ele>160.0</ele></trkpt>
+    <trkpt lat="41.0297" lon="29.0450"><ele>170.0</ele></trkpt>
+    <trkpt lat="41.0291" lon="29.0500"><ele>180.0</ele></trkpt>
+    <trkpt lat="41.0285" lon="29.0550"><ele>190.0</ele></trkpt>
+    <trkpt lat="41.0279" lon="29.0600"><ele>200.0</ele></trkpt>
+    <trkpt lat="41.0273" lon="29.0650"><ele>210.0</ele></trkpt>
+    <trkpt lat="41.0267" lon="29.0700"><ele>220.0</ele></trkpt>
+    <trkpt lat="41.0261" lon="29.0737"><ele>230.0</ele></trkpt>
+</trkseg>
+</trk>
+</gpx>
