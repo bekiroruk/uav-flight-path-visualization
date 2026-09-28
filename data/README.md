@@ -1,16 +1,16 @@
 # Flight Track Data
 
-The thesis implementation reads the UAV route from:
+The thesis implementation reads the UAV route from a GPX `track_points` layer. The repository script expects:
 
-```matlab
-T = readgeotable("sample_uavtrack.gpx", Layer="track_points");
+```text
+data/sample_uavtrack.gpx
 ```
 
 The original GPX file was **not included in the submitted project materials available for this repository**, so it is intentionally not fabricated here.
 
-To run the project, place the original `sample_uavtrack.gpx` file in this directory or update the path in `src/uav_flight_path_visualization.m`.
+To run the project, place the original file at `data/sample_uavtrack.gpx`.
 
-Expected track fields:
+Expected route information:
 
 - Latitude
 - Longitude
