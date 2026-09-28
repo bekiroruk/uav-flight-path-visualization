@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="UAV Flight Path Visualization project overview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="1" stop-color="#13263f"/>
+    </linearGradient>
+    <linearGradient id="terrain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#294a52"/>
+      <stop offset="1" stop-color="#10252f"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="560" rx="26" fill="url(#bg)"/>
+  <text x="60" y="72" fill="#f5f7fb" font-family="Arial, sans-serif" font-size="36" font-weight="700">UAV Flight Path Visualization</text>
+  <text x="60" y="108" fill="#9fb4cc" font-family="Arial, sans-serif" font-size="19">MATLAB · synchronized 2D / 3D geospatial tracking · Istanbul</text>
+
+  <rect x="55" y="145" width="500" height="340" rx="18" fill="#e8edf1"/>
+  <text x="78" y="178" fill="#17324d" font-family="Arial, sans-serif" font-size="17" font-weight="700">2D Route Tracking</text>
+  <g stroke="#c2ccd5" stroke-width="2" opacity=".9">
+    <path d="M90 220H520M90 275H520M90 330H520M90 385H520M90 440H520"/>
+    <path d="M140 200V465M220 200V465M300 200V465M380 200V465M460 200V465"/>
+  </g>
+  <path d="M115 410 C180 380 205 330 272 342 S370 286 485 258" fill="none" stroke="#15d6e8" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="115" cy="410" r="12" fill="#f000d9"/><circle cx="485" cy="258" r="12" fill="#245cff"/>
+  <circle cx="310" cy="330" r="10" fill="#0b0f14" stroke="#fff" stroke-width="4"/>
+  <text x="86" y="445" fill="#5f2b68" font-family="Arial, sans-serif" font-size="14" font-weight="700">Taksim Square</text>
+  <text x="424" y="236" fill="#173f94" font-family="Arial, sans-serif" font-size="14" font-weight="700">Camlica Tower</text>
+  <rect x="324" y="346" width="170" height="82" rx="10" fill="#ffffff" opacity=".95"/>
+  <text x="340" y="370" fill="#22384d" font-family="Arial, sans-serif" font-size="13">Distance  ·  3D</text>
+  <text x="340" y="391" fill="#22384d" font-family="Arial, sans-serif" font-size="13">Altitude   ·  MSL</text>
+  <text x="340" y="412" fill="#22384d" font-family="Arial, sans-serif" font-size="13">Heading    ·  WGS84</text>
+
+  <rect x="585" y="145" width="560" height="340" rx="18" fill="#10232d"/>
+  <text x="610" y="178" fill="#ddecf5" font-family="Arial, sans-serif" font-size="17" font-weight="700">3D Terrain View</text>
+  <rect x="610" y="198" width="510" height="245" rx="12" fill="url(#terrain)"/>
+  <path d="M610 370 C705 330 760 350 840 310 S1015 290 1120 250 V443 H610Z" fill="#315b52" opacity=".9"/>
+  <path d="M610 410 C710 360 810 390 905 345 S1035 335 1120 315" fill="none" stroke="#57786c" stroke-width="4"/>
+  <path d="M690 420 L1026 250" stroke="#14d9e8" stroke-width="7" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="690" cy="420" r="11" fill="#f000d9"/><circle cx="1026" cy="250" r="11" fill="#245cff"/>
+  <path d="M852 335 l18 -8 -7 18 5 8 -8 5 -7 -7 -18 2 11 -12 -2 -10z" fill="#fff" opacity=".95"/>
+  <text x="610" y="468" fill="#89a3b4" font-family="Arial, sans-serif" font-size="14">Camera follows the UAV while the 2D marker, heading, altitude and distance update.</text>
+
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <rect x="55" y="510" width="150" height="30" rx="15" fill="#203a54"/><text x="82" y="531" fill="#d9e8f5">GPX Track</text>
+    <rect x="220" y="510" width="170" height="30" rx="15" fill="#203a54"/><text x="244" y="531" fill="#d9e8f5">WGS84 Heading</text>
+    <rect x="405" y="510" width="170" height="30" rx="15" fill="#203a54"/><text x="430" y="531" fill="#d9e8f5">ECEF Distance</text>
+    <rect x="590" y="510" width="155" height="30" rx="15" fill="#203a54"/><text x="619" y="531" fill="#d9e8f5">EGM96 Geoid</text>
+    <rect x="760" y="510" width="175" height="30" rx="15" fill="#203a54"/><text x="787" y="531" fill="#d9e8f5">Flight Animation</text>
+    <rect x="950" y="510" width="195" height="30" rx="15" fill="#203a54"/><text x="975" y="531" fill="#d9e8f5">360° Panorama</text>
+  </g>
+</svg>
