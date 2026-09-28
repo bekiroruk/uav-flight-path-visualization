@@ -1,19 +1,26 @@
-# Working Demo Notes
+# Working Demo
 
-The repository was reconstructed from the final thesis report together with two recorded MATLAB demonstrations supplied by the author.
+The original project package includes a full screen recording of the working MATLAB implementation.
 
-## What the recordings show
+## Recording
 
-The working demonstration confirms the following implemented behavior:
+- File: `video.mp4`
+- Duration: **2:50.3**
+- Resolution: **1914 × 1068**
+- Frame rate: **30 fps**
+- Codec: **H.264 + AAC**
 
-- MATLAB Live Editor project workflow
-- Taksim Square and Camlica Tower used as the start and destination
-- Geographic route rendering in a 2D map
-- Synchronized 2D map and 3D terrain/globe views
-- A cyan UAV route between the two locations
-- Current-location marker moving along the route
-- Live distance, altitude and heading information
-- 3D camera movement following the simulated UAV flight
-- Destination-side camera rotation / panorama behavior
+## What the recording demonstrates
 
-The repository does not commit the original full screen-recording files in order to keep the source repository lightweight. The implementation in `src/uav_flight_path_visualization.m` follows the final thesis code demonstrated in those recordings.
+The recording shows the actual MATLAB workflow used for the thesis:
+
+1. Displaying Taksim Square and the destination point on a geographic map.
+2. Opening synchronized 2D geographic axes and a 3D geographic globe.
+3. Loading the route from `sample_uavtrack.gpx`.
+4. Drawing the cyan UAV flight path.
+5. Showing current position, distance, altitude and heading in the 2D view.
+6. Moving the current-location marker as the UAV progresses.
+7. Following the flight with the 3D camera.
+8. Reaching the destination and rotating the camera to create the 360-degree panorama behavior.
+
+The final MATLAB Live Script and the thesis report document the same workflow.
