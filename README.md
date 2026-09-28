@@ -2,80 +2,115 @@
 
 # UAV Flight Path Visualization
 
-### MATLAB-based UAV flight simulation with synchronized 2D & 3D geospatial views
+### 2D & 3D UAV route simulation and geospatial visualization in MATLAB
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-Mapping%20Toolbox-orange?logo=mathworks)](https://www.mathworks.com/products/mapping.html)
-[![Project](https://img.shields.io/badge/Project-Undergraduate%20Thesis-blue)](#academic-context)
-[![Year](https://img.shields.io/badge/Year-2024-lightgrey)](#academic-context)
+[![MATLAB](https://img.shields.io/badge/MATLAB-Mapping%20Toolbox-E16737?logo=mathworks&logoColor=white)](https://www.mathworks.com/products/mapping.html)
+![Undergraduate Thesis](https://img.shields.io/badge/Project-Undergraduate%20Thesis-2563EB)
+![Year](https://img.shields.io/badge/Year-2024-64748B)
+![Status](https://img.shields.io/badge/Status-Completed-16A34A)
 
-**Taksim Square → Camlica Tower · Istanbul, Türkiye**
+**Bolu Abant İzzet Baysal University · Computer Engineering · 2024**
 
 </div>
 
 <p align="center">
-  <img src="assets/hero.svg" alt="UAV Flight Path Visualization project overview" width="1000">
+  <img src="assets/hero.svg" width="1000" alt="UAV Flight Path Visualization project overview">
 </p>
 
-## Overview
+## About the Project
 
-This repository contains the implementation of my **2024 Computer Engineering undergraduate thesis**, focused on visualizing a simulated UAV flight path on synchronized **2D geographic maps** and a **3D geographic globe** in MATLAB.
+**UAV Uçuş Yolunu 2-B ve 3-B Haritalarda Görselleştirme** is my undergraduate Computer Engineering thesis project.
 
-The application loads a GPX flight track, calculates UAV heading and cumulative three-dimensional travel distance, displays live navigation information, animates the UAV route from **Taksim Square** to **Camlica Tower**, and performs a 360° camera rotation at the destination.
+The project visualizes a simulated UAV flight using MATLAB. It combines a **2D geographic map** and a **3D geographic globe**, loads a flight track from GPX data, calculates heading and three-dimensional route distance, and animates the UAV while updating position, altitude, distance and heading information.
 
-> Thesis title: **“UAV Uçuş Yolunu 2-B ve 3-B Haritalarda Görselleştirme”**
+The thesis demonstration is built around the **Taksim Square → Camlica Tower** scenario.
 
-## Working Demonstration
-
-The submitted working recordings were reviewed while reconstructing this repository. They show the MATLAB implementation rendering the route in 2D, opening a synchronized 3D terrain view, updating the current UAV position and navigation data, and moving the 3D camera along the simulated flight.
-
-See [`docs/demo.md`](docs/demo.md) for a concise description of the recorded behavior.
-
-## Features
-
-- **2D geospatial visualization** with `geoaxes` and `geoplot`
-- **3D terrain visualization** with `geoglobe` and `geoplot3`
-- **GPX flight-track import** with `readgeotable`
-- **Heading calculation** using the WGS84 ellipsoid
-- **EGM96 geoid conversion** for elevation handling
-- **3D route-distance calculation** using ECEF offsets
-- **Animated UAV route tracking** with a moving 3D camera
-- **Live telemetry-style data tips** for distance, altitude and heading
-- **360° panorama rotation** at the destination
-
-## How It Works
+## What the Application Does
 
 ```mermaid
 flowchart LR
-    A[Start & Destination] --> B[Load GPX Track]
-    B --> C[Heading Calculation]
+    A[Start / Destination] --> B[GPX Flight Track]
+    B --> C[WGS84 Heading]
     B --> D[EGM96 Height Conversion]
     D --> E[ECEF 3D Distance]
-    C --> F[Flight Animation]
+    C --> F[UAV Animation]
     E --> F
-    F --> G[2D Map]
-    F --> H[3D Globe]
+    F --> G[2D Geographic Map]
+    F --> H[3D Geographic Globe]
     H --> I[360° Panorama]
 ```
 
-The implementation converts route elevations to WGS84 ellipsoidal height before computing point-to-point 3D offsets. The resulting cumulative distance is synchronized with the animated route and displayed alongside heading and altitude.
+The project performs the following steps:
 
-For a more detailed breakdown, see [`docs/architecture.md`](docs/architecture.md).
+- plots the selected locations on a **2D satellite map**,
+- creates synchronized **2D and 3D geographic views**,
+- imports the flight track from `sample_uavtrack.gpx`,
+- calculates UAV heading using the **WGS84 ellipsoid**,
+- converts route elevations with the **EGM96 geoid model**,
+- calculates cumulative **3D distance** using ECEF offsets,
+- renders the route with `geoplot` and `geoplot3`,
+- updates the current UAV position during the animation,
+- displays **distance, altitude and heading** as live data tips,
+- moves the 3D camera along the simulated flight,
+- rotates the destination camera through **360°**.
 
-## Project Structure
+## Project Result
+
+The final thesis reports a total simulated UAV tracking distance of:
+
+> **7,532.953887 meters**
+
+The supplied GPX route contains **19 track points**, with elevation values from **50 m to 230 m**.
+
+## Original MATLAB Project
+
+The original working folder was:
+
+```text
+VisualizeUAVFlightPathOn2DAnd3DMaps/
+```
+
+The repository now preserves that same project identity. The readable MATLAB source export and the actual GPX route are versioned together:
+
+```text
+VisualizeUAVFlightPathOn2DAnd3DMaps/
+├── VisualizeUAVFlightPathOn2DAnd3DMaps.m
+├── sample_uavtrack.gpx
+└── README.md
+```
+
+The original development file is **`VisualizeUAVFlightPathOn2DAnd3DMaps.mlx`**. The `.m` file in the repository is a readable export of the code cells from that Live Script so the implementation can be inspected directly in GitHub.
+
+## Working Demo
+
+The original project includes a **2 minute 50 second** screen recording of the working MATLAB application:
+
+- **1914 × 1068**
+- **30 fps**
+- **H.264 video**
+- **AAC audio**
+
+The recording demonstrates the real 2D/3D flight visualization, current-location tracking, route animation and destination panorama behavior.
+
+Technical details of the recording are documented in [`docs/demo.md`](docs/demo.md).
+
+## Repository Structure
 
 ```text
 uav-flight-path-visualization/
+├── VisualizeUAVFlightPathOn2DAnd3DMaps/
+│   ├── VisualizeUAVFlightPathOn2DAnd3DMaps.m
+│   ├── sample_uavtrack.gpx
+│   └── README.md
 ├── assets/
 │   └── hero.svg
-├── data/
-│   └── README.md
 ├── docs/
 │   ├── architecture.md
 │   ├── demo.md
+│   ├── original-artifacts.md
 │   ├── references.md
 │   └── thesis-summary.md
-├── src/
-│   └── uav_flight_path_visualization.m
+├── .gitattributes
 ├── .gitignore
 ├── CITATION.cff
 └── README.md
@@ -83,63 +118,76 @@ uav-flight-path-visualization/
 
 ## Requirements
 
-- MATLAB
-- Mapping Toolbox
-- Internet access for online geographic basemaps / terrain tiles
-- A GPX file named `sample_uavtrack.gpx` with a `track_points` layer
+- **MATLAB**
+- **Mapping Toolbox**
+- Internet connection for geographic basemap / terrain tiles
 
-The original project expects `sample_uavtrack.gpx`. The GPX file was not present in the thesis materials available when this repository was reconstructed, so no synthetic replacement is included. See [`data/README.md`](data/README.md).
+The implementation uses MATLAB functionality including:
 
-## Running the Project
+`geoaxes` · `geoplot` · `geoglobe` · `geoplot3` · `readgeotable` · `azimuth` · `egm96geoid` · `ecefOffset`
 
-1. Clone this repository.
-2. Place the original `sample_uavtrack.gpx` file in the repository's `data/` directory.
-3. Open MATLAB and make sure **Mapping Toolbox** is installed.
-4. Run:
+## Run
+
+Clone the repository and switch to the original project directory:
+
+```bash
+git clone https://github.com/bekiroruk/uav-flight-path-visualization.git
+cd uav-flight-path-visualization/VisualizeUAVFlightPathOn2DAnd3DMaps
+```
+
+Then open MATLAB in that directory and run:
 
 ```matlab
-run("src/uav_flight_path_visualization.m")
+VisualizeUAVFlightPathOn2DAnd3DMaps
 ```
 
-The script creates the initial geographic view, calculates route metrics, renders synchronized 2D/3D views, and animates the UAV flight.
+The GPX file is intentionally stored beside the MATLAB project source because the original Live Script loads it with:
 
-## Technical Notes
-
-For the thesis demonstration, the source report records a total UAV tracking distance of approximately:
-
-```text
-7,532.953887 meters
+```matlab
+T = readgeotable("sample_uavtrack.gpx", Layer="track_points");
 ```
 
-The implementation uses an EGM96 geoid correction before ECEF-based three-dimensional distance calculation. This means the distance calculation accounts for changes in both geographic position and elevation rather than treating the route as a flat 2D path.
+## Technical Highlights
+
+| Area | Implementation |
+|---|---|
+| 2D visualization | `geoaxes`, `geoplot` |
+| 3D visualization | `geoglobe`, `geoplot3` |
+| Flight data | GPX `track_points` |
+| Heading | `azimuth` + WGS84 |
+| Elevation correction | EGM96 geoid |
+| 3D distance | ECEF offsets + Euclidean distance |
+| Animation | `campos`, `camheight`, `campitch`, `camheading` |
+| Live information | MATLAB `datatip` |
+| Final view | 360° camera rotation |
 
 ## Academic Context
 
-This project was developed as an **Undergraduate Thesis / Senior Design Project** in the **Computer Engineering Department, Bolu Abant Izzet Baysal University**, in 2024.
+This project was prepared as a **Computer Engineering Undergraduate Thesis** at **Bolu Abant İzzet Baysal University, Faculty of Engineering** in 2024.
 
-- **Author:** Bekir Oruk
-- **Advisor:** Assoc. Prof. Dr. Murat Beken
-- **Area:** UAV simulation, geospatial visualization, route tracking
+**Thesis:** *UAV Uçuş Yolunu 2-B ve 3-B Haritalarda Görselleştirme*  
+**Author:** Bekir Oruk  
+**Advisor:** Assoc. Prof. Dr. Murat Beken
 
-A concise academic summary is available in [`docs/thesis-summary.md`](docs/thesis-summary.md).
+See [`docs/thesis-summary.md`](docs/thesis-summary.md) for a concise technical summary.
 
-## Source Material & Repository Reconstruction
+## Documentation
 
-The repository has been organized from the final thesis report and recorded demonstrations of the working MATLAB implementation. The code in `src/` follows the final implementation documented in the thesis, while comments and file organization were cleaned up for reproducibility and portfolio presentation.
-
-Personal information that is not necessary for the technical project (such as student number, phone number and private contact details) is intentionally excluded.
-
-## Future Improvements
-
-Potential extensions include real-time UAV telemetry input, live GPS tracking, obstacle-aware path planning, route optimization, automatic panorama export, and integration with a physical UAV or flight controller.
+- [Architecture](docs/architecture.md)
+- [Working demo](docs/demo.md)
+- [Thesis summary](docs/thesis-summary.md)
+- [Original artifact hashes](docs/original-artifacts.md)
+- [Thesis references](docs/references.md)
 
 ## Author
 
 **Bekir Oruk**  
 Computer Engineer  
 GitHub: [@bekiroruk](https://github.com/bekiroruk)  
-Website: [bekiroruk.dev](https://bekiroruk.dev)
+Portfolio: [bekiroruk.dev](https://bekiroruk.dev)
 
 ---
 
-> This repository is shared as an academic/portfolio project. No open-source license is currently provided.
+<p align="center">
+  <sub>Undergraduate thesis project · MATLAB · UAV Simulation · Geospatial Visualization</sub>
+</p>
