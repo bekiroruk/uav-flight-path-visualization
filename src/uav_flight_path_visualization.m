@@ -68,8 +68,16 @@ drawnow;
 
 %% 5. Import the simulated UAV track
 % The GPX file must contain latitude, longitude and elevation values in the
-% track_points layer.
-T = readgeotable("sample_uavtrack.gpx", Layer="track_points");
+% track_points layer. Resolve it from the repository's data directory so
+% the script works regardless of the current MATLAB working directory.
+projectRoot = fileparts(fileparts(mfilename("fullpath")));
+gpxPath = fullfile(projectRoot, "data", "sample_uavtrack.gpx");
+
+if ~isfile(gpxPath)
+    error("Missing flight track: %s. See data/README.md.", gpxPath);
+end
+
+T = readgeotable(gpxPath, Layer="track_points");
 tlat = T.Shape.Latitude';
 tlon = T.Shape.Longitude';
 talt = T.Elevation';
