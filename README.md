@@ -79,7 +79,7 @@ VisualizeUAVFlightPathOn2DAnd3DMaps/
 └── README.md
 ```
 
-The original development file is **`VisualizeUAVFlightPathOn2DAnd3DMaps.mlx`**. The `.m` file in the repository is a readable export of the code cells from that Live Script so the implementation can be inspected directly in GitHub.
+The original development file **`VisualizeUAVFlightPathOn2DAnd3DMaps.mlx`** is included in this repository. A readable `.m` export is kept beside it so the implementation can also be inspected directly in GitHub.
 
 ## Working Demo
 
@@ -92,16 +92,22 @@ The original project includes a **2 minute 50 second** screen recording of the w
 
 The recording demonstrates the real 2D/3D flight visualization, current-location tracking, route animation and destination panorama behavior.
 
-Technical details of the recording are documented in [`docs/demo.md`](docs/demo.md).
+The full recording is included at [`demo/video.mp4`](demo/video.mp4). Technical details of the recording are documented in [`docs/demo.md`](docs/demo.md).
 
 ## Repository Structure
 
 ```text
 uav-flight-path-visualization/
 ├── VisualizeUAVFlightPathOn2DAnd3DMaps/
+│   ├── VisualizeUAVFlightPathOn2DAnd3DMaps.mlx
 │   ├── VisualizeUAVFlightPathOn2DAnd3DMaps.m
 │   ├── sample_uavtrack.gpx
 │   └── README.md
+├── demo/
+│   └── video.mp4
+├── docs/
+│   ├── thesis/
+│   │   └── bekir_oruk_193405133.docx
 ├── assets/
 │   └── hero.svg
 ├── docs/
